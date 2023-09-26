@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Excel Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="filterContainer">
+        <label for="typeFilter">Filtern nach Fahrzeugklasse:</label>
+        <select id="typeFilter">
+            <option value="">All</option>
+            <option value='Pick-up (Güter)'>Pick-up (Güter)</option>
+            <option value='Pick-up (Pers.)'>Pick-up (Pers.)</option>
+            <option value='Hochdachkombi (Güter)'>Hochdachkombi (Güter)</option>
+            <option value='Hochdachkombi (Pers.)'>Hochdachkombi (Pers.)</option>
+            <option value='Hochdachkombi (Pers.), WD'>Hochdachkombi (Pers.), WD</option>
+            <option value='Transporter Kombi (Pers.)'>Transporter Kombi (Pers.)</option>
+            <option value='Transporter Kasten bis 3,5 t'>Transporter Kasten bis 3,5 t</option>
+            <option value='Transporter Kasten bis 3,5 t, WD'>Transporter Kasten bis 3,5 t, WD</option>
+            <option value='Transporter Kasten 3,5 bis 7,5 t'>Transporter Kasten 3,5 bis 7,5 t</option>
+            <option value='Transporter Kasten 3,5 bis 7,5 t mit Aufbaugerät'>Transporter Kasten 3,5 bis 7,5 t mit Aufbaugerät</option>
+            <option value='EK-Koffer 3,5 bis 7,5 t'>EK-Koffer 3,5 bis 7,5 t</option>
+            <option value='EK-Koffer 7,5 bis 12 t'>EK-Koffer 7,5 bis 12 t</option>
+            <option value='EK-Pritsche bis 3,5 t'>EK-Pritsche bis 3,5 t</option>
+            <option value='EK-Pritsche bis 3,5 t, WD'>EK-Pritsche bis 3,5 t, WD</option>
+            <option value='EK-Pritsche mit Plane bis 3,5 t'>EK-Pritsche mit Plane bis 3,5 t</option>
+            <option value='EK-Pritsche 3,5 bis 7,5 t'>EK-Pritsche 3,5 bis 7,5 t</option>
+            <option value='EK-Pritsche 12 bis 18 t mit Aufbaugerät'>EK-Pritsche 12 bis 18 t mit Aufbaugerät</option>
+            <option value='DK-Pritsche bis 3,5 t'>DK-Pritsche bis 3,5 t</option>
+            <option value='DK-Pritsche bis 3,5 t, WD'>DK-Pritsche bis 3,5 t, WD</option>
+            <option value='DK-Pritsche 3,5 bis 7,5 t'>DK-Pritsche 3,5 bis 7,5 t</option>
+            <option value='EK-Kipper bis 3,5 t'>EK-Kipper bis 3,5 t</option>
+            <option value='EK-Kipper bis 3,5 t mit Aufbaugerät'>EK-Kipper bis 3,5 t mit Aufbaugerät</option>
+            <option value='EK-Kipper 3,5 bis 7,5 t'>EK-Kipper 3,5 bis 7,5 t</option>
+            <option value='EK-Kipper 12 bis 18 t'>EK-Kipper 12 bis 18 t</option>
+            <option value='EK-Kipper 12 bis 18 t, WD'>EK-Kipper 12 bis 18 t, WD</option>
+            <option value='EK-Kipper 12 bis 18 t mit Aufbaugerät'>EK-Kipper 12 bis 18 t mit Aufbaugerät</option>
+            <option value='EK-Kipper 12 bis 18 t mit Aufbaugerät, WD'>EK-Kipper 12 bis 18 t mit Aufbaugerät, WD</option>
+            <option value='DK-Kipper bis 3,5 t'>DK-Kipper bis 3,5 t</option>
+            <option value='DK-Kipper 3,5 bis 7,5 t'>DK-Kipper 3,5 bis 7,5 t</option>
+            <option value='Absetzkipper 7,5 bis 12 t'>Absetzkipper 7,5 bis 12 t</option>
+            <option value='Absetzkipper 12 bis 18 t'>Absetzkipper 12 bis 18 t</option>
+            <option value='Absetzkipper 12 bis 18 t, WD'>Absetzkipper 12 bis 18 t, WD</option>
+            <option value='Abfallsammelfahrzeug bis 3,5 t'>Abfallsammelfahrzeug bis 3,5 t</option>
+            <option value='Abfallsammelfahrzeug 7,5 bis 12 t, Kamms.'>Abfallsammelfahrzeug 7,5 bis 12 t, Kamms.</option>
+            <option value='Abfallsammelfahrzeug >18 t, Kamms.'>Abfallsammelfahrzeug >18 t, Kamms.</option>
+            <option value='Abfallsammelfahrzeug >18 t, mit Trichter u. Kran'>Abfallsammelfahrzeug >18 t, mit Trichter u. Kran</option>
+            <option value='Abfallsammelfahrzeug >18 t, ohne Schüttung'>Abfallsammelfahrzeug >18 t, ohne Schüttung</option>
+            <option value='Abfallsammelfahrzeug >18 t, Umleerschüttung'>Abfallsammelfahrzeug >18 t, Umleerschüttung</option>
+            <option value='Kehrichtfahrzeug bis 2 t'>Kehrichtfahrzeug bis 2 t</option>
+            <option value='Kehrichtfahrzeug 2 bis 3,5 t'>Kehrichtfahrzeug 2 bis 3,5 t</option>
+            <option value='Kehrichtfahrzeug 2 bis 3,5 t, WD'>Kehrichtfahrzeug 2 bis 3,5 t, WD</option>
+            <option value='Geräteträger bis 2 t, WD'>Geräteträger bis 2 t, WD</option>
+            <option value='Geräteträger 2 bis 3,5 t, WD'>Geräteträger 2 bis 3,5 t, WD</option>
+            <option value='Geräteträger 2 bis 3,5 t mit Schrubbdeck, WD'>Geräteträger 2 bis 3,5 t mit Schrubbdeck, WD</option>
+            <option value='Geräteträger 3,5 bis 7,5 t'>Geräteträger 3,5 bis 7,5 t</option>
+            <option value='Geräteträger 3,5 bis 7,5 t, WD'>Geräteträger 3,5 bis 7,5 t, WD</option>
+            <option value='Kehrmaschine bis 1m³, bis 3,5 t'>Kehrmaschine bis 1m³, bis 3,5 t</option>
+            <option value='Kehrmaschine 1 bis 3 m³, 3,5 bis 7,5 t'>Kehrmaschine 1 bis 3 m³, 3,5 bis 7,5 t</option>
+            <option value='Kehrmaschine >5 m³, > 7,5 t'>Kehrmaschine >5 m³, > 7,5 t</option>
+            <option value='Hubsteiger 3,5 bis 7,5 t'>Hubsteiger 3,5 bis 7,5 t</option>
+            <option value='Müllsaugcontainer (wird nachgefragt)'>Müllsaugcontainer (wird nachgefragt)</option>
+            <option value='Traktor, 1 t zGG'>Traktor, 1 t zGG</option>
+            <option value='Traktor, 6,4 t zGG'>Traktor, 6,4 t zGG</option>
+            <option value='Traktor, 8,2 t zGG'>Traktor, 8,2 t zGG</option>
+            <option value='Traktor, 9 t zGG'>Traktor, 9 t zGG</option>
+            <option value='Traktor, 12 t zGG'>Traktor, 12 t zGG</option>
+            <option value='Tandemwalze, 1,8 t zGG'>Tandemwalze, 1,8 t zGG</option>
+            <option value='Mini Bagger, 2 t zGG'>Mini Bagger, 2 t zGG</option>
+            <option value='Schaufellader, 4,5 t zGG'>Schaufellader, 4,5 t zGG</option>
+        </select>
+
+        <label for="weightClassFilter">Filter by WeightClass:</label>
+        <select id="weightClassFilter">
+            <option value="">All</option>
+            <option value="unter 3,5t">unter 3,5t</option>
+            <option value="zwischen 3,5 und 12 t">zwischen 3,5 und 12 t</option>
+            <option value="über 12t">über 12t</option>
+        </select>
+
+        <label for="dynamicColumnsFilter">Select Columns:</label>
+        <div id="dynamicColumnsFilter">
+            <!-- Checkboxes will be dynamically added here -->
+        </div>
+        <button id="applyColumnsButton">Apply Columns</button>
+    </div>
+    
+    <div id="imageContainer"></div>
+    
+    <input type="file" id="fileInput" accept=".xlsx">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

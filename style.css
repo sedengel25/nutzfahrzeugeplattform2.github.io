@@ -1,0 +1,32 @@
+/* styles.css */
+#imageContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0; /* Remove margin from .info-box */
+    flex: 1; /* Not needed anymore */
+    max-width: 100%; /* Not needed anymore */
+}
+
+.info-content {
+    margin-top: 10px;
+}
+
+/* Style for the columns of checkboxes */
+.group-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px; /* Adjust the spacing between columns */
+}
+
+/* Style for the labels of selected checkboxes */
+.checkbox-label input[type="checkbox"]:checked + span {
+    font-weight: bold;
+    color: blue;
+}
+
